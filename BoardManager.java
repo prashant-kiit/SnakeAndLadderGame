@@ -13,7 +13,11 @@ public class BoardManager {
         System.out.println("New Board is created!");
         System.out.println("Enter the no of Boxes per Side!");
         boxes_per_side=8;
-        board.setSide(boxes_per_side);
+        board.setBoard(boxes_per_side);
+    }
+
+    public void getBoard() {
+
     }
 
 }

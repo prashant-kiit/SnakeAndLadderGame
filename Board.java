@@ -1,16 +1,15 @@
 package SnakeAndLadderGame;
 
 public class Board {
-    private int boxes_per_side;
-    private Snake snake;
-    private Ladder ladder;
+    private int[][] board;
+    // private Snake snake;
+    // private Ladder ladder;
 
-    public int getSide() {
-        return boxes_per_side;
+    public int[][] getBoard() {
+        return board;
     }
 
-    public void setSide(int boxes_per_side) {
-        this.boxes_per_side=boxes_per_side;
+    public void setBoard(int boxes_per_side) {
+        board=new int[boxes_per_side][boxes_per_side];
     }
-
 }
