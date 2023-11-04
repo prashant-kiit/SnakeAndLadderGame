@@ -17,7 +17,7 @@ public class BoardManager {
     }
 
     public void getBoard() {
-
+        
     }
 
 }
