@@ -1,4 +1,4 @@
-package SnakeAndLadderGame;
+package SnakeAndLadderGame.Board;
 
 public class BoardFactory {
     public IBoard manufactureBoard() {

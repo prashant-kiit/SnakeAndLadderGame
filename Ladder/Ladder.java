@@ -1,11 +1,11 @@
-package SnakeAndLadderGame;
+package SnakeAndLadderGame.Ladder;
 
-public class Snake {
+public class Ladder {
     int id;
     int head;
     int tail;
 
-    public Snake(int id, int head, int tail) {
+    public Ladder(int id, int head, int tail) {
         this.id = id;
         this.head = head;
         this.tail = tail;

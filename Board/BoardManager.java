@@ -1,4 +1,4 @@
-package SnakeAndLadderGame;
+package SnakeAndLadderGame.Board;
 
 public class BoardManager {
     private IBoard iboard;

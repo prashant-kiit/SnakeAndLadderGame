@@ -1,4 +1,4 @@
-package SnakeAndLadderGame;
+package SnakeAndLadderGame.Player;
 
 public class Player {
     private int id;

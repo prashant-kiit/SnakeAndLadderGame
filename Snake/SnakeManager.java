@@ -1,12 +1,12 @@
-package SnakeAndLadderGame;
+package SnakeAndLadderGame.Snake;
 
 import java.util.ArrayList;
 
-public class SnakeManger {
+public class SnakeManager {
     ArrayList<Snake> snakes = new ArrayList<Snake>();
 
-    public SnakeManger() {
-        System.out.println("Welcome Snakes creating module!");
+    public SnakeManager() {
+        System.out.println("Welcome to Snakes creating module!");
     }
 
     public ArrayList<Snake> setgetSnakes() {

@@ -1,4 +1,4 @@
-package SnakeAndLadderGame;
+package SnakeAndLadderGame.Snake;
 
 public class SnakeFactory {
     public Snake manufacureSnake() {

@@ -1,4 +1,7 @@
-package SnakeAndLadderGame;
+package SnakeAndLadderGame.Application;
+
+import SnakeAndLadderGame.Board.BoardManager;
+import SnakeAndLadderGame.Player.PlayerManager;
 
 public class Main {
         public static void main(String[] args) 
