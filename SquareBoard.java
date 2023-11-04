@@ -1,6 +1,6 @@
 package SnakeAndLadderGame;
 
-public class Board {
+public class SquareBoard implements IBoard{
     private int[][] board;
     // private Snake snake;
     // private Ladder ladder;

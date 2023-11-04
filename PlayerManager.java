@@ -23,10 +23,4 @@ public class PlayerManager {
     public ArrayList<Player> getPlayers() {
         return players;
     }
-
-    public void displayPlayers() {
-        for (Player player : players) {
-            System.out.println(player.getId() + " " + player.getName());
-        }
-    }
 }
