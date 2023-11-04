@@ -16,5 +16,4 @@ public class BoardManager {
     public IBoard getBoard() {
         return iboard;
     }
-
 }

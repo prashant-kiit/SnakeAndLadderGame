@@ -9,7 +9,7 @@ public class LadderManager {
         System.out.println("Welcome to Ladder creating module!");
     }
 
-    public ArrayList<Ladder> setgetSnakes() {
+    public ArrayList<Ladder> setgetLadders() {
         System.out.println("Ladder creation begins!");
         int s = 1;
         do {
