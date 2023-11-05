@@ -1,19 +1,19 @@
 package SnakeAndLadderGame.Board;
 
 public class BoardFactory {
-    public IBoard manufactureBoard() {
-        System.out.println("Enter board type code: 1 : Rectangle , 2 : Sqaure");
-        int s=1;
-        switch (s) {
-            case 1:
-                System.out.println("Creating Rectangle Board!");
-                return new RectangleBoard();
-            case 2:
-                System.out.println("Creating Square Board!");
-                return new SquareBoard();
-            default:
-                System.out.println("Wrong Option. Creating Square Board!");
-                return new SquareBoard();
-        }
+    public IBoard1 manufactureBoard1() {
+        System.out.println("Enter No of Boxes in Board!");
+        int TotalBoxes=64;
+        return new Board1(TotalBoxes);
     }
+    public IBoard2 manufactureBoard2() {
+        System.out.println("Enter No of Boxes in Board!");
+        int TotalBoxes=64;
+        return new Board2(TotalBoxes);
+    }    
+    public IBoard3 manufactureBoard3() {
+        System.out.println("Enter No of Boxes in Board!");
+        int TotalBoxes=64;
+        return new Board3(TotalBoxes);
+    } 
 }
