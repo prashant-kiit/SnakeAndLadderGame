@@ -22,5 +22,5 @@ public class Box {
     }
     public void setDec(int dec) {
         this.dec = dec;
-    }    
+    }  
 }

@@ -20,5 +20,9 @@ public class Board3 implements IBoard3{
 
     public void setTotalBoxes(int totalBoxes) {
         TotalBoxes = totalBoxes;
-    }  
+    }
+
+    public Box getBoxs(int tempPosition) {
+        return boxs[tempPosition];
+    }
 } 

@@ -8,9 +8,9 @@ public class BoardManager {
         System.out.println("Welcome to Board Manager Module!");
     }
 
-    public void setBoard() {
+    public void setiMainBoard() {
         System.out.println("Select the type of Board!");
-        boardType="Type1";
+        boardType="Type1"; // input
         System.out.println("Creating new Board of Type " + boardType + "!");
         iMainBoard=new BoardFactoryController().chooseBoard(boardType);
     }

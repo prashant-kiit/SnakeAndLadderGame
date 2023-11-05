@@ -6,6 +6,7 @@ public class Player {
     private int id;
     private String name;
     private IDice iDice;
+    private int currentPosition=0;
 
     public Player(int id) {
         this.id=id;
@@ -39,9 +40,17 @@ public class Player {
     public void setiDice(IDice iDice) {
         this.iDice = iDice;
     }
-
+    
+    public int getCurrentPosition() {
+        return currentPosition;
+    }
+    
+    public void setCurrentPosition(int currentPosition) {
+        this.currentPosition = currentPosition;
+    }
+    
     public int rollDice(IDice iDice) {
-        setiDice(iDice);
+        setiDice(iDice);      
         return getiDice().roll();
     }
 }
