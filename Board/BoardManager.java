@@ -13,7 +13,6 @@ public class BoardManager {
         boardType="Type1";
         System.out.println("Creating new Board of Type " + boardType + "!");
         iMainBoard=new BoardFactoryController().chooseBoard(boardType);
-        System.out.println("New Board is created!");
     }
 
     public IMainBoard getiMainBoard() {
