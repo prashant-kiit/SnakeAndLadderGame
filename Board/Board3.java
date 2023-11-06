@@ -14,8 +14,7 @@ public class Board3 implements IBoard3{
         for(int i=0; i < TotalBoxes; i++) {
             System.out.println("For Box " + (i+1) + " set Snake Value ");
             boxs[i].setId(i+1);
-            boxs[i].setInc(0);
-            boxs[i].setDec(Integer.parseInt(new BufferedReader(new InputStreamReader(System.in)).readLine()));
+            boxs[i].setShiftTo((Integer.parseInt(new BufferedReader(new InputStreamReader(System.in)).readLine())));
         }        
     }
 

@@ -2,25 +2,21 @@ package SnakeAndLadderGame.Board;
 
 public class Box {
     private int id;
-    private int inc;
-    private int dec;
+    private int shiftTo;
 
     public int getId() {
         return id;
     }
+
     public void setId(int id) {
         this.id = id;
     }
-    public int getInc() {
-        return inc;
+
+    public int getShiftTo() {
+        return shiftTo;
     }
-    public void setInc(int inc) {
-        this.inc = inc;
+
+    public void setShiftTo(int shiftTo) {
+        this.shiftTo = shiftTo;
     }
-    public int getDec() {
-        return dec;
-    }
-    public void setDec(int dec) {
-        this.dec = dec;
-    }  
 }

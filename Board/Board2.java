@@ -14,8 +14,7 @@ public class Board2 implements IBoard2{
         for(int i=0; i < TotalBoxes; i++) {
             System.out.println("For Box " + (i+1) + " set Ladder Value ");
             boxs[i].setId(i+1);
-            boxs[i].setInc(Integer.parseInt(new BufferedReader(new InputStreamReader(System.in)).readLine()));
-            boxs[i].setDec(0);
+            boxs[i].setShiftTo((Integer.parseInt(new BufferedReader(new InputStreamReader(System.in)).readLine())));
         }        
     }
 
