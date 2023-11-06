@@ -1,5 +1,7 @@
 package SnakeAndLadderGame.Dice;
 
+import java.io.IOException;
+
 public class DiceManager {
     private IDice iDice;
 
@@ -7,11 +9,8 @@ public class DiceManager {
         return iDice;
     }
 
-    public void setiDice() {
+    public void setiDice() throws NumberFormatException, IOException {
         System.out.println("Setting up the Dice!");
-        System.out.println("Enter the Dice type!");
-        String diceType="Type1"; // input
-        this.iDice = new DiceFactory().manufacturDice(diceType);
-        System.out.println("Dice made!");
+        this.iDice = new DiceFactory().manufactureDice();
     }
 }

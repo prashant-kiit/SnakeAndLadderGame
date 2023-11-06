@@ -1,5 +1,7 @@
 package SnakeAndLadderGame.Application;
 
+import java.io.IOException;
+
 import SnakeAndLadderGame.Board.BoardManager;
 import SnakeAndLadderGame.Dice.DiceManager;
 import SnakeAndLadderGame.Engine.Engine;
@@ -44,7 +46,7 @@ public class Organiser {
             Organiser.diceManager = diceManager;
         }
 
-        public static void main(String[] args) 
+        public static void main(String[] args) throws NumberFormatException, IOException 
         { 
             System.out.println("Welcome!"); 
 
@@ -64,6 +66,7 @@ public class Organiser {
             System.out.println("New Dice is created!");
             
             System.out.println("Games Starts!");
+            setEngine(new Engine());
             getEngine().play(getPlayerDiceManager().getPlayers(), getDiceManager().getiDice(), getBoardManager().getiMainBoard());
             System.out.println("Game Ends!");
         }

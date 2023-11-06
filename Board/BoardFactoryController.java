@@ -1,11 +1,13 @@
 package SnakeAndLadderGame.Board;
 
+import java.io.IOException;
+
 public class BoardFactoryController {
-    public IMainBoard chooseBoard(String boardType) {
-        if (boardType == "Type1"){
+    public IMainBoard chooseBoard(int boardType) throws NumberFormatException, IOException {
+        if (boardType == 1){
             return new BoardFactory().manufactureBoard1();
         }
-        if (boardType == "Type2") {
+        if (boardType == 2) {
             return new BoardFactory().manufactureBoard2();
         }
         else {
