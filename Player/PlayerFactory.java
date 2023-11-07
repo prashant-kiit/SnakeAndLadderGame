@@ -25,24 +25,24 @@ public class PlayerFactory {
     }
 
     public Player manufacturePlayer() throws NumberFormatException, IOException {
-        System.out.println("Enter format code: 1 : id , 2 : id-name, Other : id-name!");
-        int s;
-        s = Integer.parseInt(new BufferedReader(new InputStreamReader(System.in)).readLine());
-        switch (s) {
+        System.out.println("Enter format code:\n 1 : id ,\n 2 : id-name,\n Other : id-name!");
+        int format;
+        format = Integer.parseInt(new BufferedReader(new InputStreamReader(System.in)).readLine());
+        switch (format) {
             case 1:
                 System.out.println("Enter Id!");
                 setId(Integer.parseInt(new BufferedReader(new InputStreamReader(System.in)).readLine()));
-                return new Player(getId());
+                return new PlayerBuilder().setId(getId()).getPlayer();
             case 2:
                 System.out.println("Enter Id and Name!");
-                id = 1;
-                name = "Ram";
-                return new Player(id, name);
+                setId(Integer.parseInt(new BufferedReader(new InputStreamReader(System.in)).readLine()));
+                setName((new BufferedReader(new InputStreamReader(System.in)).readLine()));
+                return new PlayerBuilder().setId(getId()).setName(getName()).getPlayer();
             default:
                 System.out.println("Enter Id and Name!");
-                id = 1;
-                name = "Ram";
-                return new Player(id, name);
+                setId(Integer.parseInt(new BufferedReader(new InputStreamReader(System.in)).readLine()));
+                setName((new BufferedReader(new InputStreamReader(System.in)).readLine()));
+                return new PlayerBuilder().setName(getName()).setId(getId()).getPlayer();
         }
     }
 }

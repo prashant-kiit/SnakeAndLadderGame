@@ -1,12 +1,14 @@
 package SnakeAndLadderGame.Player;
 
+import java.io.IOException;
+
 import SnakeAndLadderGame.Dice.IDice;
 
 public class Player {
     private int id;
     private String name;
     private IDice iDice;
-    private int currentPosition=0;
+    private int currentPosition = 0;
 
     public Player(int id) {
         this.id=id;
@@ -49,8 +51,7 @@ public class Player {
         this.currentPosition = currentPosition;
     }
     
-    public int rollDice(IDice iDice) {
-        setiDice(iDice);      
-        return getiDice().roll();
+    public int rollDice() throws NumberFormatException, IOException {     
+        return iDice.roll();
     }
 }

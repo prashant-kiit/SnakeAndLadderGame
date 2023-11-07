@@ -9,7 +9,6 @@ public class PlayerDiceManager {
 
     private ArrayList<Player> players = new ArrayList<Player>();
 
-
     public PlayerDiceManager() {
         System.out.println("Welcome to  Player Manager Module!");
     }
@@ -27,6 +26,4 @@ public class PlayerDiceManager {
     public ArrayList<Player> getPlayers() {
         return players;
     }
-
-
 }

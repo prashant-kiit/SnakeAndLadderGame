@@ -6,7 +6,6 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 import SnakeAndLadderGame.Board.IMainBoard;
-import SnakeAndLadderGame.Dice.IDice;
 import SnakeAndLadderGame.Player.Player;
 
 public class Engine {
@@ -17,9 +16,16 @@ public class Engine {
                 + player.getCurrentPosition() + "; Dice Rolled = " + diceRoll + " !");
         System.out.println("Give Signal !!!");
         Integer.parseInt(new BufferedReader(new InputStreamReader(System.in)).readLine());
-        int tempPosition = player.getCurrentPosition() + diceRoll;
-        System.out.println("TempPosition = " + tempPosition);
-        player.setCurrentPosition(iMainBoard.getBoxs(tempPosition).getShiftTo());
+        int nominalPosition = player.getCurrentPosition() + diceRoll;
+        int realPosition = iMainBoard.getBoxs(nominalPosition).getShiftTo();
+        String Ladder_Snake = "None";
+        if (nominalPosition < realPosition)
+            Ladder_Snake = "Ladder";
+        if (nominalPosition > realPosition)
+            Ladder_Snake = "Snake";
+        System.out.println("NominalPosition = " + nominalPosition + " RealPosition = " + realPosition
+                + " Ladder_Snake = " + Ladder_Snake + " !");
+        player.setCurrentPosition(realPosition);
         System.out.println("Currently Played : Player Id = " + player.getId() + "; After Postion = "
                 + player.getCurrentPosition() + " !");
         if (player.getCurrentPosition() >= iMainBoard.getTotalBoxes()) {
@@ -31,18 +37,18 @@ public class Engine {
 
     public void setup(ArrayList<Player> players) {
         for (Player player : players) {
-            player.setCurrentPosition(0);
+            player.setCurrentPosition(1);
         }
     }
 
-    public void play(ArrayList<Player> players, IDice iDice, IMainBoard iMainBoard)
+    public void play(ArrayList<Player> players, IMainBoard iMainBoard)
             throws NumberFormatException, IOException {
-        System.out.println("Players taking postion at Box 0!");
+        System.out.println("Players taking postion at Box 1!");
         setup(players);
         System.out.println("Players Ready!");
         int i = 0;
         while (i < players.size()) {
-            int diceRoll = players.get(i).rollDice(iDice);
+            int diceRoll = players.get(i).rollDice();
             setGameOver(move(players.get(i), diceRoll, iMainBoard));
             if (getGameOver() == 1) {
                 break;
