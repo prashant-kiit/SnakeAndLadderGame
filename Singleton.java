@@ -1,6 +1,6 @@
 package SnakeAndLadderGame;
 
-public class Test {
+public class Singleton {
     public static void main(String[] args) {
         Phone.getInstance();
     }
